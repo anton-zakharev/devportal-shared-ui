@@ -4,6 +4,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "type": "module",
+  "sideEffects": false,
   "version": "0.2.0",
   "description": "No description",
   "author": "Anton Zakharev <earth.dev@ya.ru>",
