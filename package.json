@@ -1,0 +1,36 @@
+{
+  "name": "devportal-landing-shared-ui",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "No description",
+  "author": "Anton Zakharev <earth.dev@ya.ru>",
+  "license": "UNLICENSED",
+  "private": false,
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.modern.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/index.css"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle --css-modules \"_shared-ui_[name]_[hash:base64:5]\"",
+    "build:watch": "yarn build --watch"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.5",
+    "@vkontakte/icons": "^3.8.0",
+    "classnames": "^2.5.1",
+    "microbundle": "^0.15.1"
+  },
+  "peerDependencies": {
+    "@vkontakte/icons": "^3.8.0",
+    "classnames": "^2.5.1",
+    "react": "^19.1.0"
+  }
+}

@@ -1,0 +1,8 @@
+.text {
+  font-family: var(--font-body);
+  font-size: fluid(14px, 17px);
+  font-weight: 400;
+  line-height: fluid(18px, 20.9px);
+  color: var(--text-secondary);
+  margin: 0;
+}

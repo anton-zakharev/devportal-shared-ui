@@ -1,0 +1,107 @@
+.card {
+  overflow: hidden;
+  position: relative;
+  height: 230px;
+  padding: fluid(18px, 20px) fluid(18px, 22px) 20px fluid(18px, 22px);
+  border-radius: 20px;
+}
+
+.card:not(.hasMask) {
+  background: var(--background-light);
+}
+
+.card.hasHref {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* WebKit-only canvas & overflow-hidden & border-radius bugfix */
+@supports (-webkit-touch-callout: none) {
+  .card {
+    clip-path: inset(0 round 20px);
+  }
+}
+
+.content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; height: 100%;
+}
+
+.mask {
+  position: absolute;
+  top: 0; right: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.brandColor {
+  --size: fluid(8px, 10px);
+  --brand-color: transparent;
+  display: block;
+  width: var(--size); height: var(--size);
+  border-radius: 50%;
+  background: var(--brand-color);
+  margin-right: fluid(8px, 10px);
+}
+
+.heading {
+  display: inline-flex;
+  align-items: center;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: fluid(8px, 30px) 0 fluid(14px, 20px);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer :global(.vkuiButton__after):not(:first-child) {
+  margin-left: 4px;
+}
+
+.footer > :global(* + *) {
+  margin-left: 20px;
+}
+
+@media (min-width: 769px) {
+  .hasMask .description {
+    padding-right: 150px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: unset;
+    min-height: 162px;
+  }
+
+  .description {
+    display: inline;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: unset;
+    text-overflow: unset;
+  }
+
+  .hasMask .description {
+    padding-right: calc(98px - fluid(18px, 22px));
+  }
+}

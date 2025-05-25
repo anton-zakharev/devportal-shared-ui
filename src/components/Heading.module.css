@@ -1,0 +1,38 @@
+.h1 {
+  font-family: var(--font-heading);
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-size: fluid(30px, 44px);
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-size: fluid(22px, 30px);
+  font-weight: 500;
+  line-height: fluid(30px, 46px);
+}
+
+.h3 {
+  font-family: var(--font-heading);
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-size: fluid(18px, 24px);
+  font-weight: 500;
+  line-height: fluid(22px, 32px);
+}
+
+.h4 {
+  font-family: var(--font-heading);
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-size: fluid(18px, 20px);
+  font-weight: 500;
+  line-height: fluid(22px, 25.5px);
+}
+
+@media (max-width: 768px) {
+  .h3,
+  .h4 {
+    font-weight: 600;
+  }
+}
