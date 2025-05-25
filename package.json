@@ -1,7 +1,10 @@
 {
-  "name": "devportal-landing-shared-ui",
+  "name": "@worldwidebaby/devportal-shared-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "No description",
   "author": "Anton Zakharev <earth.dev@ya.ru>",
   "license": "UNLICENSED",
@@ -18,6 +21,7 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "build": "microbundle --css-modules \"_shared-ui_[name]_[hash:base64:5]\"",
     "build:watch": "yarn build --watch"
