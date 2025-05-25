@@ -872,6 +872,33 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.27.1"
 
+"@floating-ui/core@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.0.tgz#1aff27a993ea1b254a586318c29c3b16ea0f4d0a"
+  integrity sha512-FRdBLykrPPA6P76GGGqlex/e7fbe0F1ykgxHYNXQsH/iTEtjMj/f9bpY5oQqbjt5VgZvgz/uKXbGuROijh3VLA==
+  dependencies:
+    "@floating-ui/utils" "^0.2.9"
+
+"@floating-ui/dom@^1.0.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.0.tgz#f9f83ee4fee78ac23ad9e65b128fc11a27857532"
+  integrity sha512-lGTor4VlXcesUMh1cupTUTDoCxMb0V6bm3CnxHzQcw8Eaf1jQbgQX4i02fYgT0vJ82tb5MZ4CZk1LRGkktJCzg==
+  dependencies:
+    "@floating-ui/core" "^1.7.0"
+    "@floating-ui/utils" "^0.2.9"
+
+"@floating-ui/react-dom@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-2.1.2.tgz#a1349bbf6a0e5cb5ded55d023766f20a4d439a31"
+  integrity sha512-06okr5cgPzMNBy+Ycse2A6udMi4bqwW/zgBF/rwjcNqWkyr82Mcg8b0vjX8OJpZFy/FKjJmw6wV7t44kK6kW7A==
+  dependencies:
+    "@floating-ui/dom" "^1.0.0"
+
+"@floating-ui/utils@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
+  integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
+
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.8.tgz#4f0e06362e01362f823d348f1872b08f666d8142"
@@ -986,7 +1013,7 @@
     magic-string "^0.25.0"
     string.prototype.matchall "^4.0.6"
 
-"@swc/helpers@^0.5.17":
+"@swc/helpers@^0.5.0", "@swc/helpers@^0.5.13", "@swc/helpers@^0.5.17":
   version "0.5.17"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.17.tgz#5a7be95ac0f0bf186e7e6e890e7a6f6cda6ce971"
   integrity sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==
@@ -1041,13 +1068,46 @@
   dependencies:
     "@swc/helpers" "^0.5.17"
 
-"@vkontakte/icons@^3.8.0":
+"@vkontakte/icons@^3.0.0", "@vkontakte/icons@^3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-3.8.0.tgz#8d15bd90286eaf02c63b4cb98f9520b451bbde74"
   integrity sha512-ZskA4Au41zzth+cFlZwEFODKrh5Gp/PZ8e+KwqejOXZZKJDRR8JPA+8TDmBDymsi5jqlhWZ3S7emuGGlabweLA==
   dependencies:
     "@swc/helpers" "^0.5.17"
     "@vkontakte/icons-sprite" "^3.1.0"
+
+"@vkontakte/vkjs@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkjs/-/vkjs-2.0.1.tgz#a93511932ba4bd3a0d8e9b1316cf0d7d928ec1dd"
+  integrity sha512-VPce+45X7mXpukkLwDaXwFfqfq0NZecoZ3Js3XwXFfhwNanetxMo/6XqG3sV319mxJoAqW8gMQoSv+ExLTlmYg==
+  dependencies:
+    "@swc/helpers" "^0.5.0"
+    clsx "^2.1.1"
+
+"@vkontakte/vkui-date-fns-tz@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui-date-fns-tz/-/vkui-date-fns-tz-0.0.4.tgz#ac0a6b5a9f89b6f2d426c34e72d9f028f9b0d9c3"
+  integrity sha512-0mLb/gS/P6xgDTH2m7ZVlP+QfJNDO/6jevRf43R8EH+4iTA2f9RZTXb5h9bab0VMDZ7stdXfKUhEN84gyFPVKw==
+
+"@vkontakte/vkui-floating-ui@^0.2.3":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui-floating-ui/-/vkui-floating-ui-0.2.4.tgz#fdd90b4d8e14dbab980fdb4baaac3c5f3033bcc0"
+  integrity sha512-61YTYsKpOr07mzH5+NP0UYdlXmdjf1LSsE7OTT6/982Gmij37NUy2qZVCvaXIMBIRcnggbnJCTYCDHuFQbhFlg==
+  dependencies:
+    "@floating-ui/react-dom" "^2.1.2"
+    "@swc/helpers" "^0.5.13"
+
+"@vkontakte/vkui@^7.3.6":
+  version "7.3.6"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-7.3.6.tgz#68ce2fde306579b6ad69e2aef64fb6d3ca34df03"
+  integrity sha512-nalQI69Pkx07go5soSqXA2dJhJUXwFJoHtZuqpa3YFS7ZZthKlJZgBylran6OGrvRsfowLok/yqCXACAZuUmzg==
+  dependencies:
+    "@swc/helpers" "^0.5.17"
+    "@vkontakte/icons" "^3.0.0"
+    "@vkontakte/vkjs" "^2.0.1"
+    "@vkontakte/vkui-date-fns-tz" "^0.0.4"
+    "@vkontakte/vkui-floating-ui" "^0.2.3"
+    date-fns "^4.1.0"
 
 acorn@^8.14.0:
   version "8.14.1"
@@ -1312,6 +1372,11 @@ cliui@^8.0.1:
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
 
+clsx@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
+  integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
+
 color-convert@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-2.0.1.tgz#72d3a68d598c9bdb3af2ad1e84f21d896abd4de3"
@@ -1500,6 +1565,11 @@ data-view-byte-offset@^1.0.1:
     call-bound "^1.0.2"
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
+
+date-fns@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-4.1.0.tgz#64b3d83fff5aa80438f5b1a633c2e83b8a1c2d14"
+  integrity sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==
 
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   version "4.4.1"

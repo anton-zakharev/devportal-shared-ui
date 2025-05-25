@@ -1,0 +1,25 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list > :global(li)::before {
+  content: "•";
+  position: absolute;
+  top: 0; left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  text-align: center;
+}
+
+.list > :global(li) {
+  position: relative;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.list > :global(li):last-child {
+  margin-bottom: 15px;
+}

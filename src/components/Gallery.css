@@ -1,0 +1,27 @@
+.gallery {
+  --vkui--color_icon_primary_invariably: #99a2ad;
+  --vkui--opacity_disable_accessibility: .3;
+  padding-bottom: 38px;
+  margin-top: 24px;
+}
+
+.gallery :global(.vkuiCarouselBase__viewport) {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.gallery :global(.vkuiCarouselBase__bullets) {
+  padding: 16px 0;
+  bottom: 0;
+}
+
+.gallery :global(.vkuiCarouselBase__bullet) {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+}
+
+.gallery :global(img) {
+  margin-top: 0;
+  border-radius: 0;
+}

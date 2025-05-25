@@ -5,7 +5,7 @@ import {useMatchMedia} from "../lib/use-match-media"
 import {useResizeObserver} from "../lib/use-resize-observer"
 import {Heading} from "./Heading"
 import {Text} from "./Text"
-import styles from "./Card.module.css"
+import styles from "./Card.css"
 
 type Props =
   & HTMLAttributes<HTMLDivElement>

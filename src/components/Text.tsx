@@ -1,6 +1,6 @@
 import {type HTMLAttributes} from "react"
 import cn from "classnames"
-import styles from "./Text.module.css"
+import styles from "./Text.css"
 
 type Props = HTMLAttributes<HTMLParagraphElement>
 

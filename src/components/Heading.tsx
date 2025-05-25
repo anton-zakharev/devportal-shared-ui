@@ -1,6 +1,6 @@
 import {type HTMLAttributes} from "react"
 import cn from "classnames"
-import styles from "./Heading.module.css"
+import styles from "./Heading.css"
 
 type Props =
   & HTMLAttributes<HTMLHeadingElement>

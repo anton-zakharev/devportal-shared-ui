@@ -1,0 +1,11 @@
+.paragraph {
+  margin: 24px 0 0 0;
+}
+
+.paragraph + .paragraph {
+  margin-top: 15px;
+}
+
+.paragraph + :global(.vkuiSpacing__host) {
+  margin-top: 15px;
+}

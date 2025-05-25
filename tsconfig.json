@@ -19,7 +19,8 @@
   },
   "include": [
     "src",
-    "node_modules/microbundle/index.d.ts"
+    "node_modules/microbundle/index.d.ts",
+    "global.d.ts"
   ],
   "exclude": [
     "lib"

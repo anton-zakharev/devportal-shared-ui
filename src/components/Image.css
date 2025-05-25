@@ -1,0 +1,21 @@
+.figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+
+.image {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 24px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 11px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 20.9px;
+}

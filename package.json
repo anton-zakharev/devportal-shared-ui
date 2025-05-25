@@ -31,6 +31,7 @@
   "devDependencies": {
     "@types/react": "^19.1.5",
     "@vkontakte/icons": "^3.8.0",
+    "@vkontakte/vkui": "^7.3.6",
     "autoprefixer": "^10.4.21",
     "classnames": "^2.5.1",
     "microbundle": "^0.15.1",
@@ -39,6 +40,7 @@
   },
   "peerDependencies": {
     "@vkontakte/icons": "^3.8.0",
+    "@vkontakte/vkui": "^7.3.6",
     "classnames": "^2.5.1",
     "react": "^19.1.0"
   }
