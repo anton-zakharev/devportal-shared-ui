@@ -21,7 +21,9 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "microbundle --css-modules \"_shared-ui_[name]_[hash:base64:5]\"",
     "build:watch": "yarn build --watch"
@@ -29,8 +31,11 @@
   "devDependencies": {
     "@types/react": "^19.1.5",
     "@vkontakte/icons": "^3.8.0",
+    "autoprefixer": "^10.4.21",
     "classnames": "^2.5.1",
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "postcss": "^8.5.3",
+    "postcss-fluid": "^1.4.2"
   },
   "peerDependencies": {
     "@vkontakte/icons": "^3.8.0",
