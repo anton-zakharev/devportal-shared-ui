@@ -23,6 +23,8 @@ type Props =
       }
       brandColor?: CSSProperties["backgroundColor"]
       buttons: ReactNode
+      // Track visibility change to trigger redraw when the card becomes visible
+      visible: boolean
       href?: string
     }
 
@@ -34,6 +36,7 @@ export function Card({
   brandColor,
   buttons,
   className,
+  visible,
   href,
   ...rest
 }: Props) {
@@ -45,6 +48,9 @@ export function Card({
   // Draw mask
   useResizeObserver(() => {
     if (!cardRef.current || !maskRef.current || !svg || !colSpan) return
+
+    // Skip if in a hidden DOM subtree
+    if (!maskRef.current.offsetParent) return
 
     let {pathData, originalWidth, originalHeight} = svg
 
@@ -81,7 +87,7 @@ export function Card({
 
     ctx.globalCompositeOperation = "destination-out"
     pathData.forEach(d => ctx.fill(new Path2D(d)))
-  }, cardRef, [isMd, svg])
+  }, cardRef, [isMd, svg, visible])
 
   function handleClick() {
     if (href) window.open(href, "_blank")
