@@ -1,4 +1,6 @@
 .text {
+  --text-secondary: #818c99;
+
   font-family: var(--font-body);
   font-size: fluid(14px, 17px);
   font-weight: 400;

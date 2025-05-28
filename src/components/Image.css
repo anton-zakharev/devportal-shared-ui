@@ -1,4 +1,6 @@
 .figure {
+  --text-secondary: #818c99;
+
   display: flex;
   flex-direction: column;
   width: 100%;

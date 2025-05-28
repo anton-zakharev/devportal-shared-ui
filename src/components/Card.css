@@ -1,4 +1,7 @@
 .card {
+  --background-light: #fff;
+  --text-secondary: #818c99;
+
   overflow: hidden;
   position: relative;
   height: 230px;

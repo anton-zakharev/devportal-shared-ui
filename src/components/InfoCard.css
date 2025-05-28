@@ -1,4 +1,6 @@
 .infoCard {
+  --background-light: #fff;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
