@@ -41,6 +41,7 @@
 .header {
   display: flex;
   align-items: center;
+  min-height: fluid(22px, 32px);
 }
 
 .brandColor {
