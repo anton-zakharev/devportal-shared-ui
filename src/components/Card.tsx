@@ -77,13 +77,25 @@ export function Card({
     let canvas = maskRef.current
     let ctx = canvas.getContext("2d")!
 
-    canvas.width = canvasWidth
-    canvas.height = canvasHeight
+    let dpr = window.devicePixelRatio || 1
+    canvas.width = canvasWidth * dpr
+    canvas.height = canvasHeight * dpr
+    canvas.style.width = canvasWidth + "px"
+    canvas.style.height = canvasHeight + "px"
 
+    ctx.resetTransform()
+    ctx.clearRect(0, 0, canvasWidth * dpr, canvasHeight * dpr)
     ctx.fillStyle = "#fff"
-    ctx.fillRect(0, 0, canvasWidth, canvasHeight)
-    ctx.translate(offsetX, offsetY)
-    ctx.scale(scale, scale)
+    ctx.fillRect(0, 0, canvasWidth * dpr, canvasHeight * dpr)
+
+    ctx.setTransform(
+      scale * dpr,
+      0,
+      0,
+      scale * dpr,
+      Math.round(offsetX * dpr),
+      Math.round(offsetY * dpr),
+    )
 
     ctx.globalCompositeOperation = "destination-out"
     pathData.forEach(d => ctx.fill(new Path2D(d)))
