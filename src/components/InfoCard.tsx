@@ -1,4 +1,4 @@
-import {type HTMLAttributes, type ReactNode} from "react"
+import {type HTMLAttributes, type ReactNode, type Ref} from "react"
 import cn from "classnames"
 import {Heading} from "./Heading"
 import {Text} from "./Text"
@@ -7,13 +7,14 @@ import styles from "./InfoCard.css"
 type Props =
   & HTMLAttributes<HTMLDivElement>
   & {
+      ref?: Ref<HTMLDivElement | null>
       name: string
       description: string
       button: ReactNode
     }
 
-export function InfoCard({name, description, button, className, ...rest}: Props) {
-  return <div className={cn(styles.infoCard, className)} {...rest}>
+export function InfoCard({ref, name, description, button, className, ...rest}: Props) {
+  return <div ref={ref} className={cn(styles.infoCard, className)} {...rest}>
     <header className={styles.header}>
       <Heading level="h3">{name}</Heading>
       <Text className={styles.description}>{description}</Text>
