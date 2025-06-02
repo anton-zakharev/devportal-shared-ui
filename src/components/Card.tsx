@@ -174,7 +174,7 @@ function getOffsetY(
       let visibleHeight = 78
       return canvasHeight - visibleHeight
     } else {
-      return 23
+      return 18
     }
   } else {
     return (canvasHeight - targetHeight) / 2
