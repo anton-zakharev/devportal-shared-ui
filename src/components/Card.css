@@ -5,7 +5,7 @@
   overflow: hidden;
   position: relative;
   height: 230px;
-  padding: fluid(18px, 20px) fluid(18px, 22px) 20px fluid(18px, 22px);
+  padding: fluid(18px, 20px) fluid(15px, 22px) 20px fluid(18px, 22px);
   border-radius: 20px;
 }
 
@@ -51,7 +51,13 @@
   --size: fluid(8px, 10px);
   --brand-color: transparent;
   display: block;
-  width: var(--size); height: var(--size);
+  align-self: flex-start;
+  margin-top: calc(
+    fluid(22px, 32px) /* `<Heading level="h3" />` line-height */ / 2 -
+    var(--size) / 2
+  );
+  min-width: var(--size); width: var(--size);
+  min-height: var(--size); height: var(--size);
   border-radius: 50%;
   background: var(--brand-color);
   margin-right: fluid(8px, 10px);
@@ -106,6 +112,6 @@
   }
 
   .hasMask .description {
-    padding-right: calc(98px - fluid(18px, 22px));
+    padding-right: calc(76px - fluid(18px, 20px));
   }
 }

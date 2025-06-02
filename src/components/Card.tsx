@@ -125,7 +125,7 @@ export function Card({
         <Heading level="h3" className={styles.heading}>
           {title}
         </Heading>
-        {hasHref && <Icon24ChevronCompactRight width={16} style={{marginLeft: 4}} />}
+        {hasHref && <Icon24ChevronCompactRight width={16} style={{minWidth: 16, marginLeft: 4}} />}
       </header>
       {description && <Text className={styles.description}>{description}</Text>}
       <footer className={styles.footer}>
@@ -145,7 +145,7 @@ function getOffsetX(
 ): number {
   if (isMd) {
     if (colSpanMd == 12) {
-      let visibleWidth = 93
+      let visibleWidth = 70
       return canvasWidth - visibleWidth
     } else {
       return (canvasWidth - targetWidth) / 2
