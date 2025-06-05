@@ -2,7 +2,7 @@ import {type HTMLAttributes, type ReactNode, type Ref} from "react"
 import cn from "classnames"
 import {Heading} from "./Heading"
 import {Text} from "./Text"
-import styles from "./InfoCard.css"
+import styles from "../styles/InfoCard.css"
 
 type Props =
   & HTMLAttributes<HTMLDivElement>

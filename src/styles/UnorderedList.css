@@ -20,6 +20,10 @@
   padding-left: 20px;
 }
 
+.list > :global(li > p) {
+  margin: 0;
+}
+
 .list > :global(li):last-child {
   margin-bottom: 15px;
 }

@@ -1,6 +1,6 @@
 import {type PropsWithChildren} from "react"
 import {Gallery as VKUIGallery} from "@vkontakte/vkui"
-import styles from "./Gallery.css"
+import styles from "../styles/Gallery.css"
 
 let TSFixMe: any = VKUIGallery
 
