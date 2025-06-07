@@ -1,11 +1,11 @@
 import {mergeAttributes} from "@tiptap/core"
 import {Link, isAllowedUri} from "@tiptap/extension-link"
-import styles from "@vkontakte/vkui/dist/cssm/components/Link/Link.module.css"
+import styles from "../styles/Link.css"
 
 export let LinkNode = Link.extend({
   renderHTML({HTMLAttributes}) {
     let attrs = {
-      class: styles.Link,
+      class: styles.link,
     }
 
     // Prevent XSS attacks

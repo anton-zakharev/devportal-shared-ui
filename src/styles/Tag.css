@@ -1,0 +1,36 @@
+.link {
+  --text-dark: #000;
+  --text-light: #fff;
+  --text-secondary: #818c99;
+  --accent: #2688eb;
+  text-decoration: none;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: color .15s ease-in-out;
+  display: block;
+
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -.08px;
+}
+
+.link .tag.primary:hover,
+.link .tag.secondary:hover {
+  color: var(--text-dark);
+}
+
+.tag.primary {
+  background: var(--accent);
+  color: var(--text-light);
+}
+
+.tag.secondary {
+  background: #f2f3f5;
+  color: var(--text-secondary);
+}

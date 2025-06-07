@@ -1,0 +1,81 @@
+.articleCard {
+  --card-max-w: 100%;
+
+  display: flex;
+  flex-direction: column;
+  max-width: var(--card-max-w);
+  width: 100%;
+  min-width: 303px;
+  text-decoration: none;
+  outline: none;
+  color: unset;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  aspect-ratio: 38.3 / 21.4;
+  padding: fluid(14px, 16px) fluid(12px, 14px);
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .header {
+    height: 0;
+    padding-top: 16px;
+    padding-bottom: calc(((21.4 / 38.3) * 100%) - 16px);
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 0;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.tags {
+  display: flex;
+  margin: fluid(14px, 19px) 0 0 0;
+  list-style: none;
+  padding: 0;
+}
+
+.tags > :global(* + *) {
+  margin-left: 5px;
+}
+
+.tag {
+  text-decoration: none;
+}
+
+.articleCard .heading {
+  margin-top: fluid(8px, 10px);
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: fluid(8px, 6px);
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+
+  @supports not (aspect-ratio: 1 / 1) {
+    .header {
+      height: unset; padding-top: unset; padding-bottom: unset;
+    }
+  }
+}

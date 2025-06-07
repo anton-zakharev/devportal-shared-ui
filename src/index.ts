@@ -4,6 +4,8 @@ export {Text} from "./components/Text"
 export {Lead} from "./components/Lead"
 export {Br} from "./components/Br"
 export {ClosingNote} from "./components/ClosingNote"
+export {ArticleCard} from "./components/ArticleCard"
+export {Tag} from "./components/Tag"
 
 export {Heading} from "./components/Heading"
 export {HeadingNode} from "./extensions/Heading"
