@@ -7,6 +7,7 @@ export type ApiButton = {
   text: string
   href: string
   appearance: "ACCENT" | "POSITIVE" | "NEGATIVE" | "NEUTRAL" | "OVERLAY" | "ACCENT_INVARIABLE"
+  mode: "PRIMARY" | "SECONDARY" | "TERTIARY" | "OUTLINE" | "LINK"
   size: "SMALL" | "MEDIUM" | "LARGE"
   align: "LEFT" | "CENTER" | "RIGHT"
   sizeY: "COMPACT" | "REGULAR"
@@ -55,16 +56,17 @@ let toApiSize = (str: string): ApiButton["size"] => {
 // CORE ================================================================================================================
 export let toApiButton = (uiButton: UiButton, index: number): ApiButton => {
   let beforeIcon = isValidElement(uiButton.before)
-    ? (uiButton.before?.props as ButtonIconProps | null)?.src
+    ? (uiButton.before?.props as ButtonIconProps | null)?.id
     : undefined
   let afterIcon = isValidElement(uiButton.after)
-    ? (uiButton.after?.props as ButtonIconProps | null)?.src
+    ? (uiButton.after?.props as ButtonIconProps | null)?.id
     : undefined
 
   let apiButton: ApiButton = {
     text: uiButton.children,
     href: uiButton.href,
     appearance: toUpperSnake(uiButton.appearance || "accent") as ApiButton["appearance"], // stricter types?
+    mode: toUpperCase(uiButton.mode || "primary") as ApiButton["mode"],
     size: toApiSize(uiButton.size || "s"),
     align: toUpperCase(uiButton.align || "center") as ApiButton["align"],
     sizeY: "REGULAR", // const
@@ -86,6 +88,7 @@ export let toUiButton = (apiButton: ApiButton): UiButton => {
     appearance: toLowerKebab(apiButton.appearance) as UiButton["appearance"], // stricter types?
     size: toLowerInitial(apiButton.size) as UiButton["size"],
     align: toLowerCase(apiButton.align) as UiButton["align"],
+    mode: toLowerCase(apiButton.mode) as UiButton["mode"],
     rounded: apiButton.rounded,
     stretched: apiButton.stretched,
     disabled: apiButton.disabled,
