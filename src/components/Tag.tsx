@@ -1,6 +1,5 @@
 import {type ElementType} from "react"
-import {type TappableProps, Tappable} from "@vkontakte/vkui"
-import cn from "classnames"
+import {type TappableProps, classNames as cn, Tappable} from "@vkontakte/vkui"
 import styles from "../styles/Tag.css"
 
 type Props =

@@ -1,5 +1,5 @@
 import {type HTMLAttributes, type ElementType} from "react"
-import cn from "classnames"
+import {classNames as cn} from "@vkontakte/vkui"
 import {Heading} from "./Heading"
 import {Text} from "./Text"
 import {Tag} from "./Tag"

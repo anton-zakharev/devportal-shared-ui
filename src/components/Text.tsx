@@ -1,5 +1,5 @@
 import {type HTMLAttributes} from "react"
-import cn from "classnames"
+import {classNames as cn} from "@vkontakte/vkui"
 import styles from "../styles/Text.css"
 
 type Props = HTMLAttributes<HTMLParagraphElement>

@@ -1,6 +1,6 @@
 import {type ReactNode, type CSSProperties, type HTMLAttributes, useRef} from "react"
 import {Icon24ChevronCompactRight} from "@vkontakte/icons"
-import cn from "classnames"
+import {classNames as cn} from "@vkontakte/vkui"
 import {useMatchMedia} from "../lib/useMatchMedia"
 import {useResizeObserver} from "../lib/useResizeObserver"
 import {Heading} from "./Heading"

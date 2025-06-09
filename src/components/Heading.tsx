@@ -1,5 +1,5 @@
-import {type HTMLAttributes, type Ref} from "react"
-import cn from "classnames"
+import {type HTMLAttributes} from "react"
+import {classNames as cn} from "@vkontakte/vkui"
 import styles from "../styles/Heading.css"
 
 type Props = HTMLAttributes<HTMLHeadingElement> & {
