@@ -1,6 +1,5 @@
-import {isValidElement} from "react"
+import {type HTMLAttributes, isValidElement} from "react"
 import {type ButtonProps} from "@vkontakte/vkui"
-import {type Props as ButtonIconProps, ButtonIcon} from "./components/ButtonIcon"
 
 // TYPES ===============================================================================================================
 export type ApiButton = {
@@ -56,10 +55,10 @@ let toApiSize = (str: string): ApiButton["size"] => {
 // CORE ================================================================================================================
 export let toApiButton = (uiButton: UiButton, index: number): ApiButton => {
   let beforeIcon = isValidElement(uiButton.before)
-    ? (uiButton.before?.props as ButtonIconProps | null)?.id
+    ? (uiButton.before?.props as HTMLAttributes<HTMLElement> | null)?.id
     : undefined
   let afterIcon = isValidElement(uiButton.after)
-    ? (uiButton.after?.props as ButtonIconProps | null)?.id
+    ? (uiButton.after?.props as HTMLAttributes<HTMLElement> | null)?.id
     : undefined
 
   let apiButton: ApiButton = {
@@ -92,8 +91,8 @@ export let toUiButton = (apiButton: ApiButton): UiButton => {
     rounded: apiButton.rounded,
     stretched: apiButton.stretched,
     disabled: apiButton.disabled,
-    before: apiButton.beforeIcon ? <ButtonIcon src={apiButton.beforeIcon} /> : null,
-    after: apiButton.afterIcon ? <ButtonIcon src={apiButton.afterIcon} /> : null,
+    before: apiButton.beforeIcon ? <img src={apiButton.beforeIcon} alt="." /> : null,
+    after: apiButton.afterIcon ? <img src={apiButton.afterIcon} alt="." /> : null,
   }
 
   return uiButton
