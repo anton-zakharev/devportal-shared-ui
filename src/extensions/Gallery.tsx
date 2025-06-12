@@ -68,7 +68,7 @@ export let GalleryNode = Node.create({
     ]
   },
   renderHTML({HTMLAttributes}) {
-    return ["gallery", mergeAttributes(HTMLAttributes)]
+    return ["div", mergeAttributes(HTMLAttributes)]
   },
   addNodeView() {
     return ReactNodeViewRenderer(GalleryComponent, {
