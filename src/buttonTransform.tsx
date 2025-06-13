@@ -3,6 +3,14 @@ import {type ButtonProps} from "@vkontakte/vkui"
 
 // TYPES ===============================================================================================================
 export type ApiButton = {
+  /**
+   * 1) FE-side stage
+   *    ^ The identifier can be undefined here if we just built the button
+   *      and are preparing to send it to the backend
+   * 2) BE-side stage
+   *    ^ Always UUID
+   * */
+  id?: string
   text: string
   href: string
   appearance: "ACCENT" | "POSITIVE" | "NEGATIVE" | "NEUTRAL" | "OVERLAY" | "ACCENT_INVARIABLE"
@@ -21,6 +29,8 @@ export type ApiButton = {
 export type UiButton = Omit<ButtonProps, "children" | "href"> & {
   children: string
   href: string
+  /* BE-side identifier */
+  "data-backend-id"?: string
 }
 
 // HELPERS =============================================================================================================
@@ -77,6 +87,10 @@ export let toApiButton = (uiButton: UiButton, index: number): ApiButton => {
     index,
   }
 
+  if (uiButton["data-backend-id"]) {
+    apiButton.id = uiButton["data-backend-id"]
+  }
+
   return apiButton
 }
 
@@ -93,6 +107,10 @@ export let toUiButton = (apiButton: ApiButton): UiButton => {
     disabled: apiButton.disabled,
     before: apiButton.beforeIcon ? <img src={apiButton.beforeIcon} alt="." /> : null,
     after: apiButton.afterIcon ? <img src={apiButton.afterIcon} alt="." /> : null,
+  }
+
+  if (apiButton.id) {
+    uiButton["data-backend-id"] = apiButton.id
   }
 
   return uiButton
