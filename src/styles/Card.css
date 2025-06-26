@@ -4,7 +4,8 @@
 
   overflow: hidden;
   position: relative;
-  height: 230px;
+  max-height: 230px;
+  height: 100%;
   padding: fluid(18px, 20px) fluid(15px, 22px) 20px fluid(18px, 22px);
   border-radius: 20px;
 }
