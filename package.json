@@ -1,8 +1,5 @@
 {
   "name": "@worldwidebaby/devportal-shared-ui",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "type": "module",
   "sideEffects": false,
   "version": "0.4.12",
