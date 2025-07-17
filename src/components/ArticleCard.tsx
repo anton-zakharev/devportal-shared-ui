@@ -45,7 +45,7 @@ export function ArticleCard({
   return <LinkComponent to={link} tabIndex={-1} className={cn(styles.articleCard, className)} {...rest}>
     <header className={styles.header}>
       <img {...imgLazyProps} src={image} className={styles.image} alt="." />
-      <Tag LinkComponent={LinkComponent} mode="secondary">{dateFormatter.format(date)}</Tag>
+      <Tag hasHover={false} LinkComponent={LinkComponent} mode="secondary">{dateFormatter.format(date)}</Tag>
     </header>
     {tags.length > 0 && (
       <section aria-label="Tags">
