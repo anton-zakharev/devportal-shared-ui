@@ -8,9 +8,10 @@ type Props =
       LinkComponent: ElementType
       children: string
       mode: "primary" | "secondary"
+      maxLength?: number
     }
 
-export function Tag({LinkComponent, mode, children, href, ...rest}: Props) {
+export function Tag({LinkComponent, mode, children, href, maxLength = 18, ...rest}: Props) {
   let noop = () => {}
   let tag = (
     // @ts-ignore
@@ -22,7 +23,10 @@ export function Tag({LinkComponent, mode, children, href, ...rest}: Props) {
       {...rest}
       {...(href ? {onClick: noop} : {})}
     >
-      {children}
+      {children.length > maxLength
+         ? children.slice(0, maxLength) + "…"
+         : children
+      }
     </Tappable>
   )
 
