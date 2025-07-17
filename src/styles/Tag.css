@@ -4,7 +4,7 @@
   --text-secondary: #818c99;
   --accent: #2688eb;
   text-decoration: none;
-  cursor: inherit;
+  cursor: pointer;
 }
 
 .tag {
@@ -19,6 +19,7 @@
   font-weight: 400;
   line-height: 16px;
   letter-spacing: -.08px;
+  cursor: inherit;
 }
 
 .link .tag.primary:hover,
