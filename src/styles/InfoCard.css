@@ -31,10 +31,11 @@
 
 @media (max-width: 768px) {
   .infoCard {
-    height: unset;
+    height: 100%;
   }
 
   .footer {
-    margin-top: 14px;
+    padding-top: 14px;
+    margin-top: auto;
   }
 }
