@@ -24,7 +24,7 @@ export function Tag({LinkComponent, mode, children, href, maxLength = 18, ...res
       {...(href ? {onClick: noop} : {})}
     >
       {children.length > maxLength
-         ? children.slice(0, maxLength) + "…"
+         ? children.slice(0, maxLength).trimEnd() + "…"
          : children
       }
     </Tappable>
