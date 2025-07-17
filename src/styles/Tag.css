@@ -4,6 +4,7 @@
   --text-secondary: #818c99;
   --accent: #2688eb;
   text-decoration: none;
+  cursor: inherit;
 }
 
 .tag {
