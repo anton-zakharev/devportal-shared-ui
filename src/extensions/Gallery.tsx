@@ -64,7 +64,7 @@ export let GalleryNode = Node.create({
   },
   parseHTML() {
     return [
-      {tag: "div[data-src]"},
+      {tag: "gallery"},
     ]
   },
   renderHTML({HTMLAttributes}) {
