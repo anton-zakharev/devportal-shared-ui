@@ -5,12 +5,7 @@ import {Text} from "./Text"
 import {Tag} from "./Tag"
 import styles from "../styles/ArticleCard.css"
 
-let dateFormatter = new Intl.DateTimeFormat("ru", {
-  day: "2-digit",
-  month: "long",
-  year: "numeric",
-})
-
+type Language = "ru" | "en"
 type Props = HTMLAttributes<HTMLElement> & {
   LinkComponent: ElementType
   link: string
@@ -22,6 +17,7 @@ type Props = HTMLAttributes<HTMLElement> & {
   heading: string
   description?: string
   lazy?: boolean
+  language?: Language
 }
 
 export function ArticleCard({
@@ -36,8 +32,14 @@ export function ArticleCard({
   description,
   lazy,
   className,
+  language = "ru",
   ...rest
 }: Props) {
+  let dateFormatter = new Intl.DateTimeFormat(language == "ru" ? "ru-RU" : "en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  })
   let imgLazyProps = lazy
     ? {loading: "lazy" as const, fetchPriority: "low" as const, decoding: "async" as const}
     : {}
