@@ -2,7 +2,7 @@
   "name": "@worldwidebaby/devportal-shared-ui",
   "type": "module",
   "sideEffects": false,
-  "version": "0.4.24",
+  "version": "0.4.25",
   "description": "No description",
   "author": "Anton Zakharev <earth.dev@ya.ru>",
   "license": "UNLICENSED",
