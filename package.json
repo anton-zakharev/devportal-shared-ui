@@ -2,7 +2,7 @@
   "name": "@worldwidebaby/devportal-shared-ui",
   "type": "module",
   "sideEffects": false,
-  "version": "0.4.26",
+  "version": "0.4.36",
   "description": "No description",
   "author": "Anton Zakharev <earth.dev@ya.ru>",
   "license": "UNLICENSED",
@@ -24,7 +24,8 @@
   ],
   "scripts": {
     "build": "microbundle --css-modules \"_shared-ui_[name]_[hash:base64:5]\"",
-    "build:watch": "yarn build --watch"
+    "build:watch": "yarn build --watch",
+    "ship": "npm version patch --no-git-tag-version && npm publish --access public --registry https://registry.npmjs.org"
   },
   "devDependencies": {
     "@tiptap/core": "^2.13.0",
@@ -59,5 +60,8 @@
     "@vkontakte/icons": "^3.8.0",
     "@vkontakte/vkui": "^7.3.6",
     "react": "^19.1.0"
+  },
+  "dependencies": {
+    "@yaireo/relative-time": "^1.1.0"
   }
 }

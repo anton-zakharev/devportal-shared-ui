@@ -23,6 +23,8 @@ export {UnorderedList} from "./components/UnorderedList"
 export {Image} from "./components/Image"
 export {Gallery} from "./components/Gallery"
 export {Dinkus} from "./components/Dinkus"
+export {CommentBox} from "./components/CommentBox"
+export {UserPicture} from "./components/UserPicture"
 
 export {HeadingNode} from "./extensions/Heading"
 export {ParagraphNode} from "./extensions/Paragraph"
